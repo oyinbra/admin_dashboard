@@ -103,19 +103,19 @@ class LineChartCard extends StatelessWidget {
                       reservedSize: 32,
                       interval: 1,
                       getTitlesWidget: (double value, TitleMeta meta) {
-                        return bottomTitle[value.toInt()] != null
-                            ? SideTitleWidget(
-                                axisSide: meta.axisSide,
-                                space: 10,
-                                child: Text(
-                                    bottomTitle[value.toInt()].toString(),
-                                    style: TextStyle(
-                                        fontSize: Responsive.isMobile(context)
-                                            ? 9
-                                            : 12,
-                                        color: Colors.grey[400])),
-                              )
-                            : const SizedBox();
+            return bottomTitle[value.toInt()] != null
+              ? SideTitleWidget(
+                space: 10,
+                child: Text(
+                  bottomTitle[value.toInt()].toString(),
+                  style: TextStyle(
+                    fontSize: Responsive.isMobile(context)
+                      ? 9
+                      : 12,
+                    color: Colors.grey[400])),
+                meta: meta,
+                )
+              : const SizedBox();
                       },
                     ),
                   ),
@@ -170,7 +170,6 @@ class LineChartCard extends StatelessWidget {
                 maxY: 105,
                 minY: -5,
               ),
-              swapAnimationDuration: const Duration(milliseconds: 250),
             ),
           ),
         ],

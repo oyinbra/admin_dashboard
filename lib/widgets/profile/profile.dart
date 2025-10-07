@@ -33,7 +33,7 @@ class Profile extends StatelessWidget {
                 height: 15,
               ),
               const Text(
-                "Summer",
+                "Isaac Adonkie",
                 style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               ),
               const SizedBox(
